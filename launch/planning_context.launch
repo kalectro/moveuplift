@@ -1,0 +1,16 @@
+<launch>
+  <!-- By default we do not overwrite the URDF. Change the following to true to change the default behavior -->
+  <arg name="load_robot_description" default="false"/>
+
+  <!-- Load universal robotic description format (URDF) -->
+  <param if="$(arg load_robot_description)" name="robot_description" textfile="$(find uplift_description)/robots/uplift_description.URDF" />
+      
+  <!-- The semantic description that corresponds to the URDF -->
+  <param name="robot_description_semantic" textfile="$(find moveuplift)/config/uplift_description.srdf" />
+  
+  <!-- Load to the parameter server yaml files -->
+  <group ns="robot_description_planning">    
+    <rosparam command="load" file="$(find moveuplift)/config/joint_limits.yaml"/>
+  </group>
+  
+</launch>
