@@ -1,11 +1,11 @@
 joint_limits:
   arm:
     has_velocity_limits: true
-    max_velocity: 1.0
+    max_velocity: 0.5
     has_acceleration_limits: true
-    max_acceleration: 1.0
+    max_acceleration: 0.25
   spine:
     has_velocity_limits: true
-    max_velocity: 0.02
+    max_velocity: 0.015
     has_acceleration_limits: true
-    max_acceleration: 1.0
+    max_acceleration: 0.5
