@@ -1,15 +1,15 @@
 sensors:
  - sensor_type: point_cloud_sensor
    point_cloud_topic: /camera/depth_registered/points
-   max_range: 1.5
+   max_range: 5.0
    frame_subsample: 1
    point_subsample: 1
    self_mask:
-       min_sensor_dist: .1
-       self_see_default_padding: .01
+       min_sensor_dist: .4
+       self_see_default_padding: .10
        self_see_default_scale: 1.0
        self_see_links:
          - name: arm
-           padding: .1
+           padding: 0.01
          - name: wrist
-           padding: .1
+           padding: 0.01
